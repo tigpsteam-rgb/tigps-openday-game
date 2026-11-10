@@ -47,7 +47,7 @@ function clean_(r) {
   const player = ['', 'kid', 'adult'].indexOf(r.player) >= 0 ? r.player : '';
   let score = '', total = '', answers = '';
   if (ev === 'finish') {
-    total = Math.max(0, Math.min(25, parseInt(r.total, 10) || 0));
+    total = Math.max(0, Math.min(50, parseInt(r.total, 10) || 0));
     score = Math.max(0, Math.min(total, parseInt(r.score, 10) || 0));
     answers = String(r.answers || '').replace(/[^0-9:,]/g, '').slice(0, 200); // 例如 "4:1,6:0"
   }
